@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <title>Kontak - MAs An-Nashar</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <img src="img/logo2.jpeg" alt="Logo MAs AnANnashar">
+            <h1>Kontak MAs An-Nashar</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="programs.html">Program Sekolah</a></li>
+                    <li><a href="news.html">Berita Dan Kegiatan</a></li>
+                    <li><a href="contact.html" class="active">Kontak</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Cari...">
+            <button id="search-button">Cari</button>
+        </div>
+        <main>
+            <section id="contact-info">
+                <h2>Hubungi Kami</h2>
+                <p>Alamat: Jl. KH Abd. Jabbar Ashiri, Pai, Kec. Biringkanaya, Kota Makassar, Sulawesi Selatan 90243</p>
+                <p>Telepon: (62) 823-1307-294</p>
+                <p>Email: masannashar@gmail.com</p>
+            </section>
+            <section id="contact-form">
+                <h2>Formulir Kontak</h2>
+                <form>
+                    <label for="name">Nama:</label>
+                    <input type="tex" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+            </section>
+            <section id="location">
+                <h2>Lokasi Sekolah</h2>
+                <div id="map" style="width:100%;height:400px;"></div>
+            </section>
+        </main>
+            <footer>
+                <p>&copy; 2024 MAs An-Nashar. All rights reserved.</p>
+            </footer>
+            <script src="scripts.js"></script>
+            <script>
+                function iniMap() {
+                    var schoolLocation = { lat: -6.200000, lng: 106.816666};
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 15,
+                        center: schoolLocation
+                    });
+                    var marker = new google.maps.Marker({
+                        position: schoolLocation,
+                        mao: map
+                    });
+                }
+                google.maps.event.addDomlistener(window, 'load', iniMap);
+            </script>
+    </body>
+</html>
