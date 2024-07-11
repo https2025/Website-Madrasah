@@ -192,6 +192,6 @@ button:hover, input[type="submit"]:hover {
 
     @media screen and (max-width: 600px) {
         nav ul {
-            flex-direction: colimn;
+            flex-direction: column;
         }
     }
