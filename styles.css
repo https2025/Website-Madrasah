@@ -13,7 +13,7 @@ header {
     background: url('img/logo.jpeg') no-repeat center center/cover;
     background-color: #4CAF50;
     color: white;
-    padding: 0.1em 0;
+    padding: 10px 20px;
     text-align: center;
     top: 0;
     z-index: 1000;
@@ -46,21 +46,45 @@ nav ul {
     background-color: rgba(0, 0, 0, 0.7);
     margin: 0;
     width: 100%;
+    gap: 20px;
 }
 
 nav ul li {
     margin: 0 5px;
+    position: relative;
 }
 
 nav u li a {
     display: block;
-    padding: 15px 20px;
+    padding: 10px 15px;
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s, colo 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 5px;
 }
 
+nav ul li a:hover {
+    background-color: #575757;
+    transform: translateY(-3px);
+}
+
+nav ul li a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s, left 0.3s;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+    left: 0;
+}
+    
 nav ul li a:hover, nav ul li a.active {
     text-decoration: underline;
     background-color: #4CAF50;
@@ -163,3 +187,11 @@ button, input[type="submit"] {
 button:hover, input[type="submit"]:hover {
     background-color: #45a049;
 }
+
+/*media query*/
+
+    @media screen and (max-width: 600px) {
+        nav ul {
+            flex-direction: colimn;
+        }
+    }
