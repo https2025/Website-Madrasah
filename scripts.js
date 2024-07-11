@@ -36,13 +36,4 @@ document.addEventListener('DOMContentLoaded', () => {
         newsArticle.innerHTML = `<h3>${news.title}<h3><p>${news.content}<p>`;
         newSection.appendChild(newsArticle);
     });
-
-// laci navigasi
-menuToggle.addEventListener('click', () => {
-    if (drawerNav.style.left === '0px') {
-        drawerNav.style.left = '-250px';
-    } else {
-        drawerNav.style.left = '0px';
-        }
-    });
 });
