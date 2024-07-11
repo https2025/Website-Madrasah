@@ -42,7 +42,7 @@ menuToggle.addEventListener('click', () => {
     if (drawerNav.style.left === '0px') {
         drawerNav.style.left = '-250px';
     } else {
-        drawerNav.style.left = '0px'
+        drawerNav.style.left = '0px';
         }
     });
 });
